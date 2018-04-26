@@ -1,35 +1,37 @@
-var hacker = "Jimena";
-console.log(`Bienvenida ${hacker} ¿Como estas Hoy?`);
-
-var user = prompt("¿Cual es tu nombre?");
-console.log(`Bienvenido ${user}`);
-
-var hacker = "Jimena";
-
-console.log("Jimena tiene " + hacker.length + " caracteres.");
-console.log("tiene " + user.length + " caracteres.");
-
-if (hacker.length > user.length) {
-    console.log(`Èl nombre de ${hacker} es mas largo, tiene ${hacker.length}`);
-} else if (hacker.length < user.length){
-    console.log(`Èl nombre de ${user} es mas largo, tiene ${user.length}`);
-}else {
-    console.log(`Los dos nombres son igual de largos, tienen ${hacker.length}`);
+function maxNumbers(num1, num2) {
+    if (num1 > num2){
+        console.log(num1 + " es mayor que " + num2);
+    }
+    else{
+        console.log(num2 + " es mayor que " + num1);
+    }    
 }
 
-var separatednames = "";
+// encuentra la palabra mas larga    
 
-for (var i = 0; i < hacker.length; i++) {
-    separatednames = separatednames + hacker[i].toUpperCase() + " ";
+var Words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+
+var maxlength = 0;
+var maxWord = "";
+
+Words.forEach(function(element){
+    if (element.length > maxlength){
+        maxlength = element.length;
+        maxWord = element;
+    }
+});
+
+console.log(maxlength, maxWord);
+
+// ejer 3 suma de numeros
+
+var numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+
+function sum(arrayNum) {
+    var total = 0;
+    arrayNum.forEach(function(element){
+        total += element;
+        console.log(total);
+    });
 }
-console.log(separatednames);
-
-var namereverse = "";
-
-for (var i = user.length-1; i >= 0; i--) {
-    namereverse += user[i].toUpperCase() + " ";
-}
-
-console.log(namereverse);
-
-
+sum(numbers);
