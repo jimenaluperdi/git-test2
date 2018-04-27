@@ -92,3 +92,5 @@ function exists(arrayWord, word) {
 console.log(exists(word));
 
 // ejercicio 8
+
+
