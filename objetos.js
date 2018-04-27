@@ -45,4 +45,10 @@ var book4 = {
 }
 user2.books.push(book4);
 
+users.forEach(function(user2){
+    if (user2.id === 2){
+        user2.books.push(book2);
+    } 
+});
+
 
