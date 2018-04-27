@@ -84,7 +84,7 @@ function exists(arrayWord, word) {
     arrayWord.forEach(function(elem){
         if (word === elem) {
             exists = true;
-        }
+        } 
     });
     return exists;
 }
@@ -93,4 +93,21 @@ console.log(exists(word));
 
 // ejercicio 8
 
+var words = ['machine', 'matter', 'subset', 'trouble', 'starting', 'matter', 'eating', 'matter', 'truth', 'disobedience', 'matter'];
 
+function repeat(arrayWords, word) {
+    var Search = "matter";
+    var i = 0;
+    var counter = 0;
+    arrayWords.forEach(function (element){
+        while (i != -1) {
+            var i = arrayWords.indexOf(Search, i);
+            if (i != -1) {
+                i++;
+                counter++;
+            }
+        }
+       return words;
+    });
+}    
+console.log(repeat(words));
